@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bryan Electronics - Samsung Galaxy A55</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f8f9fa}
+a{text-decoration:none;color:#333}
+.topbar{background:#0b2a4a;color:white;font-size:12px;padding:6px 20px;display:flex;justify-content:space-between}
+header{background:white;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd}
+.logo{display:flex;gap:8px;align-items:center}
+.logo-box{background:#0b5ed7;color:white;font-size:30px;font-weight:bold;padding:4px 12px;border-radius:5px}
+.logo b{color:#0b2a4a;font-size:20px}
+.logo span{display:block;font-size:10px;letter-spacing:3px;color:#0b5ed7}
+nav a{margin:0 12px;font-size:14px}
+nav a.active{color:#0b5ed7;font-weight:bold}
+.search{display:flex;border:1px solid #ccc;border-radius:20px;overflow:hidden;width:280px}
+.search input{border:none;padding:8px;flex:1;outline:none}
+.search button{background:#0b5ed7;color:white;border:none;padding:0 15px}
+.icons{font-size:20px;display:flex;gap:15px}
+.cart{position:relative}
+.badge{position:absolute;top:-8px;right:-10px;background:#0b5ed7;color:white;font-size:11px;padding:2px 6px;border-radius:50%}
+.banner{background:linear-gradient(rgba(0,40,90,.9),rgba(0,40,90,.9)),url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200');background-size:cover;color:white;padding:25px 20px}
+.banner h1{font-size:28px}
+.breadcrumb{padding:10px 20px;font-size:13px;background:white}
+.breadcrumb a{color:#0b5ed7}
+.main{display:flex;gap:20px;padding:10px 20px}
+.left{display:flex;gap:10px}
+.thumbs img{width:70px;height:70px;object-fit:cover;border:1px solid #ddd;display:block;margin-bottom:10px;cursor:pointer}
+.thumbs img.active{border:2px solid #0b5ed7}
+.big{position:relative;border:1px solid #ddd;background:white;padding:10px}
+.big img{width:320px;height:320px;object-fit:contain}
+.off{position:absolute;top:10px;left:10px;background:#0b5ed7;color:white;padding:4px 8px;font-size:12px}
+.arrow{position:absolute;top:50%;background:white;border:1px solid #ddd;width:30px;height:30px;border-radius:50%;text-align:center;line-height:30px;cursor:pointer}
+.center{flex:1;background:white;padding:15px;border:1px solid #eee}
+.stock{background:#e6f4ea;color:green;padding:3px 8px;border-radius:10px;font-size:12px}
+.center h2{margin:8px 0}
+.stars{color:#f5a623;font-size:14px}
+.price{color:#0b5ed7;font-size:24px;font-weight:bold;margin:10px 0}
+.price s{color:#999;font-size:14px}
+.save{background:red;color:white;font-size:11px;padding:3px 6px;border-radius:10px}
+.center li{list-style:none;margin:6px 0;font-size:14px}
+.qty{display:flex;align-items:center;gap:10px;margin:12px 0}
+.qty button{width:35px;height:35px;border:1px solid #ccc;background:white;cursor:pointer}
+.btn{background:#0b5ed7;color:white;border:none;padding:12px 20px;border-radius:5px;cursor:pointer;flex:1}
+.btn2{background:white;color:#0b5ed7;border:1px solid #0b5ed7;padding:12px 20px;border-radius:5px;cursor:pointer;flex:1}
+.btns{display:flex;gap:10px}
+.trust{display:flex;gap:15px;margin-top:15px;font-size:12px;color:#0b5ed7}
+.right{width:260px}
+.box{background:#f0f6ff;padding:15px;border-radius:8px;margin-bottom:15px}
+.box h4{margin-bottom:10px}
+.box p{font-size:13px;margin:6px 0}
+.upgrade{background:linear-gradient(90deg,#0b2a4a,#0b5ed7);color:white;padding:15px;border-radius:8px;display:flex;justify-content:space-between}
+.upgrade button{background:white;border:none;padding:6px 12px;border-radius:20px;margin-top:8px;cursor:pointer}
+.tabs{margin:10px 20px;background:white;border:1px solid #eee}
+.tabs-head{display:flex;gap:20px;padding:12px;border-bottom:1px solid #eee}
+.tabs-head div.active{color:#0b5ed7;border-bottom:2px solid #0b5ed7;padding-bottom:8px}
+.tabs-body{padding:15px;font-size:14px}
+footer{background:#0b2a4a;color:white;padding:25px 20px;display:flex;justify-content:space-between;margin-top:20px}
+footer h4{margin-bottom:10px}
+footer a{color:#ccc;display:block;font-size:13px;margin:5px 0}
+.news{display:flex;margin-top:8px}
+.news input{padding:8px;flex:1;border:none}
+.news button{background:#0b5ed7;color:white;border:none;padding:0 12px}
+.copy{background:#071c33;color:#ccc;font-size:12px;padding:10px 20px;display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>📍 Douala, Cameroon &nbsp; 📞 +237 679 94 21 71 &nbsp; ✉ support@bryanelectronics.com</div>
+  <div>🚚 Free delivery for orders over 100,000 XAF</div>
+</div>
+
+<header>
+  <div class="logo"><div class="logo-box">B</div><div><b>BRYAN</b><span>ELECTRONICS</span></div></div>
+  <nav><a href="#">Home</a><a href="#" class="active">Shop</a><a href="#">About Us</a><a href="#">Contact</a></nav>
+  <div class="search"><input placeholder="Search for products..."><button>🔍</button></div>
+  <div class="icons"><span>👤</span><span>♡</span><span class="cart">🛒 <span class="badge">3</span></span></div>
+</header>
+
+<div class="banner"><h1>Product Details</h1><p>Get the best technology at the best price.</p></div>
+
+<div class="breadcrumb">🏠 &gt; <a href="#">Shop</a> &gt; <a href="#">Smartphones</a> &gt; Samsung Galaxy A55</div>
+
+<div class="main">
+  <div class="left">
+    <div class="thumbs">
+      <img class="active" src="images.jpg">
+      <img src="second.jpg">
+      <img src="pen.jpg">
+      <img src="game.jpg">
+    </div>
+    <div class="big">
+      <span class="off">-15%</span>
+      <img src="images.jpg">
+      <div class="arrow" style="left:10px">&lt;</div>
+      <div class="arrow" style="right:10px">&gt;</div>
+      <p style="text-align:center;font-size:12px">🔍 Hover to zoom</p>
+    </div>
+  </div>
+
+  <div class="center">
+    <span class="stock">✔ In Stock</span>
+    <h2>Samsung Galaxy A55</h2>
+    <p class="stars">★★★★★ <span style="color:#333">4.7 (124 reviews)</span></p>
+    <p class="price">295,000 XAF <s>350,000 XAF</s> <span class="save">Save 55,000 XAF</span></p>
+    <ul>
+      <li>✔ 6.6" Super AMOLED Display</li>
+      <li>✔ 128GB Storage | 8GB RAM</li>
+      <li>✔ 50MP Triple Camera</li>
+      <li>✔ 5G Connectivity</li>
+      <li>✔ Long-lasting Battery</li>
+    </ul>
+    <div class="qty">Quantity: <button>-</button> 1 <button>+</button></div>
+    <div class="btns"><button class="btn">🛒 Add to Cart</button><button class="btn2">♡ Add to Wishlist</button></div>
+    <div class="trust"><span>🛡️ Secure Payment<br>100% secure</span><span>🚚 Fast Delivery<br>in 24-48h</span><span>🎧 24/7 Support<br>Always here</span></div>
+  </div>
+
+  <div class="right">
+    <div class="box">
+      <h4>📢 Why Choose Bryan Electronics ?</h4>
+      <p>✔ Original Products</p><p>✔ Best Prices in Cameroon</p><p>✔ Fast & Reliable Delivery</p><p>✔ Easy Return Policy</p><p>✔ Professional Support</p>
+    </div>
+    <div class="upgrade">
+      <div><h3>Upgrade Your<br><span style="color:#4da3ff">Tech Life</span></h3><p>with Bryan Electronics</p><button>Shop Now →</button></div>
+      <img src="images.jpg" width="80">
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tabs-head"><div class="active">Description</div><div>Specifications</div><div>Reviews (124)</div></div>
+  <div class="tabs-body">
+    <p>The Samsung Galaxy A55 is a powerful and stylish smartphone designed for performance and elegance. With its stunning display, advanced camera and long-lasting battery, it's the perfect choice for work, study and entertainment.</p><br>
+    <p>✔ Super AMOLED display for vibrant colors<br>✔ Powerful processor for smooth performance<br>✔ Long-lasting battery for all-day use</p>
+  </div>
+</div>
+
+<footer>
+  <div><div class="logo"><div class="logo-box">B</div><div><b style="color:white">BRYAN</b><span>ELECTRONICS</span></div></div><p>Smart Tech. Better Life.</p></div>
+  <div><h4>Quick Links</h4><a href="#">Home</a><a href="#">Shop</a><a href="#">About Us</a><a href="#">Contact</a></div>
+  <div><h4>Customer Service</h4><a href="#">FAQs</a><a href="#">Shipping Policy</a><a href="#">Return Policy</a><a href="#">Terms & Conditions</a></div>
+  <div><h4>Contact Us</h4><a href="#">📞 +237 679 94 21 71</a><a href="#">✉ support@bryanelectronics.com</a><a href="#">📍 Douala, Cameroon</a></div>
+  <div><h4>Follow Us</h4><p> f ◎ ▶ ♪</p><p>Subscribe to our Newsletter</p><div class="news"><input placeholder="Your email address"><button>➤</button></div></div>
+</footer>
+
+<div class="copy"><span>© 2025 Bryan Electronics. All rights reserved.</span><span>Secure Payments | Fast Delivery | Genuine Products</span></div>
+
+</body>
+</html>
